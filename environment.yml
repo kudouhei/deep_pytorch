@@ -1,0 +1,13 @@
+name: deep_pytorch
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - ipykernel
+  - jupyterlab
+  - numpy
+  - pytorch
+  - torchvision
+  - torchaudio
