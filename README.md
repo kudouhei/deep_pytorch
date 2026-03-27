@@ -12,6 +12,22 @@ python -m ipykernel install --user --name deep_pytorch --display-name "deep_pyto
 
 然后在 Notebook 里把 kernel 切换到：`deep_pytorch (Py3.12)`。
 
+## macOS 注意：若遇到 SSL / OpenSSL 导入错误
+
+如果你看到类似 `ImportError: ... _ssl ... libcrypto ...` 的报错，通常是系统里 Homebrew 的 OpenSSL 和 Anaconda 的 OpenSSL 动态链接冲突。
+
+本项目已将 `deep_pytorch` 的 Jupyter kernel 里设置了：
+
+```bash
+DYLD_LIBRARY_PATH=/opt/anaconda3/envs/deep_pytorch/lib
+```
+
+如果你在终端里运行脚本/命令，也可以临时这样跑：
+
+```bash
+DYLD_LIBRARY_PATH=/opt/anaconda3/envs/deep_pytorch/lib python your_script.py
+```
+
 更新环境（改了 `environment.yml` 之后）：
 
 ```bash
