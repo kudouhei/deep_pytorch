@@ -17,3 +17,5 @@ dependencies:
       - accelerate
       - safetensors
       - huggingface_hub<1.0
+      - imageio
+      - imageio-ffmpeg
