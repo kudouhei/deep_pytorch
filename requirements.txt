@@ -11,3 +11,4 @@ jupyterlab
 numpy
 imageio
 imageio-ffmpeg
+matplotlib
