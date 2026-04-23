@@ -37,3 +37,13 @@ Masked language modeling (MLM) is a training objective where some tokens in the 
 | Widely used in BERT                    | Masking randomness           |
 
 ---
+
+#### Q5. What are Sequence-to-Sequence Models?
+Sequence-to-Sequence (Seq2Seq) Models are a type of neural network architecture designed to transform one sequence of data into another sequence. These models are commonly used in tasks where the input and output have variable lengths, such as in machine translation, text summarization, and speech recognition.
+
+---
+
+#### Q6. How do autoregressive models differ from masked models in LLM training?
+Autoregressive models, such as GPT, generate text one token at a time, with each token predicted based on the previously generated tokens. This sequential approach is ideal for tasks like text generation. Masked models, like BERT, predict randomly masked tokens within a sentence, leveraging both left and right context. Autoregressive models excel in generative tasks, while masked models are better suited for understanding and classification tasks.
+
+---
