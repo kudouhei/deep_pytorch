@@ -23,6 +23,17 @@ Temperature is a hyperparameter that controls the randomness of text generation 
 
 A low temperature (close to 0) makes the model highly deterministic, favoring the most probable tokens. Conversely, a high temperature (above 1) encourages more diversity by flattening the distribution, allowing less probable tokens to be selected. For instance, a temperature of 0.7 strikes a balance between creativity and coherence, making it suitable for generating diverse but sensible outputs.
 
-
 ---
 
+#### Q4. What is masked language modeling, and how does it contribute to model pretraining?
+
+Masked language modeling (MLM) is a training objective where some tokens in the input are randomly masked, and the model is tasked with predicting them based on context. This forces the model to learn contextual relationships between words, enhancing its ability to understand language semantics. MLM is commonly used in models like BERT, which are pretrained using this objective to develop a deep understanding of language before fine-tuning on specific tasks.
+
+| Pros                                   | Cons                          |
+|-----------------------------------------|-------------------------------|
+| Enhances contextual understanding      | Requires large amount of data |
+| Improves language semantics            | Computationally expensive     |
+| Pretraining for fine-tuning            | Potential for overfitting     |
+| Widely used in BERT                    | Masking randomness           |
+
+---
