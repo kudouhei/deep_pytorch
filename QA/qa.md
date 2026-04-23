@@ -53,4 +53,17 @@ Embeddings are vector representations of tokens that capture their semantic mean
 
 ---
 
+#### Q8. Explain the difference between top-k sampling and nucleus (top-p) sampling in LLMs.
+Top-k token sampling: We sample the next token among the k tokens with the highest predicted probabilities.
+
+Top-p sampling: We sample among top predicted words with an associated cumulative probability of at least p.
+
+---
+
+#### Q9. How does prompt engineering influence the output of LLMs?
+Prompt engineering involves crafting input prompts to guide an LLM’s output effectively. Since LLMs are highly sensitive to input phrasing, a well-designed prompt can significantly influence the quality and relevance of the response. For example, adding context or specific instructions within the prompt can improve accuracy in tasks like summarization or question-answering. Prompt engineering is especially useful in zero-shot and few-shot learning scenarios, where task-specific examples are minimal.
+
+---
+
+
 </div>
