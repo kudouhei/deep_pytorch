@@ -48,5 +48,9 @@ Sequence-to-Sequence (Seq2Seq) Models are a type of neural network architecture 
 Autoregressive models, such as GPT, generate text one token at a time, with each token predicted based on the previously generated tokens. This sequential approach is ideal for tasks like text generation. Masked models, like BERT, predict randomly masked tokens within a sentence, leveraging both left and right context. Autoregressive models excel in generative tasks, while masked models are better suited for understanding and classification tasks.
 
 ---
+#### Q7. What role do embeddings play in LLMs, and how are they initialized?
+Embeddings are vector representations of tokens that capture their semantic meaning. In LLMs, embeddings are used to convert tokens into continuous vectors that can be processed by the model. They are initialized using techniques like random initialization or pre-training on large corpora.
+
+---
 
 </div>
