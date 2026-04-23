@@ -18,3 +18,11 @@ LoRA and QLoRA are techniques designed to optimize the fine-tuning of Large Lang
 
 ---
 
+#### Q3. Explain the concept of temperature in LLM text generation.
+Temperature is a hyperparameter that controls the randomness of text generation by adjusting the probability distribution over possible next tokens. 
+
+A low temperature (close to 0) makes the model highly deterministic, favoring the most probable tokens. Conversely, a high temperature (above 1) encourages more diversity by flattening the distribution, allowing less probable tokens to be selected. For instance, a temperature of 0.7 strikes a balance between creativity and coherence, making it suitable for generating diverse but sensible outputs.
+
+
+---
+
