@@ -1,3 +1,4 @@
+<div style="max-width: 820px; margin: 0 auto; padding: 24px 24px;">
 
 #### Q1. What is tokenization, and why is it important in LLMs?
 Tokenization is the process of splitting text into smaller units called **tokens**, which can be words, subwords, or even characters. This step is crucial because LLMs do not understand raw text directly — they process sequences of numbers representing these tokens.
@@ -47,3 +48,5 @@ Sequence-to-Sequence (Seq2Seq) Models are a type of neural network architecture 
 Autoregressive models, such as GPT, generate text one token at a time, with each token predicted based on the previously generated tokens. This sequential approach is ideal for tasks like text generation. Masked models, like BERT, predict randomly masked tokens within a sentence, leveraging both left and right context. Autoregressive models excel in generative tasks, while masked models are better suited for understanding and classification tasks.
 
 ---
+
+</div>
