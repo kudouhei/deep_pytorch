@@ -75,4 +75,18 @@ Out-of-vocabulary words refer to words that the model did not encounter during t
 
 ---
 
+#### Q12. How does the Transformer architecture overcome the challenges faced by traditional Sequence-to-Sequence models?
+The Transformer architecture overcomes key limitations of traditional Seq2Seq models in several ways:
+- **Parallel Processing**: Seq2Seq models process sequentially, slowing training. Transformers use self-attention to process tokens in parallel, speeding up both training and inference.
+- **Attention Mechanism**: Seq2Seq models struggle with long-range dependencies. Transformers use self-attention mechanisms to capture long-range dependencies, allowing them to process information across the entire input sequence.
+- **Positional Encoding**: Since Transformers process the entire sequence at once, positional encoding is used to ensure the model understands token order.
+- **Context Bottleneck**: Seq2Seq uses a single context vector, limiting information flow. Transformers let the decoder attend to all encoder outputs, improving context retention. 
+
+---
+
+
+
+
+
+---
 </div>
