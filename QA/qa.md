@@ -84,9 +84,10 @@ The Transformer architecture overcomes key limitations of traditional Seq2Seq mo
 
 ---
 
+#### Q13. What is overfitting in machine learning, and how can it be prevented?
+Overfitting occurs when a machine learning model performs well on the training data but poorly on unseen or test data. This typically happens because the model has learned not only the underlying patterns in the data but also the noise and outliers, making it overly complex and tailored to the training set. As a result, the model fails to generalize to new data.
 
-
-
+---
 
 ---
 </div>
