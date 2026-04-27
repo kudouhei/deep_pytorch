@@ -65,5 +65,10 @@ Prompt engineering involves crafting input prompts to guide an LLM’s output ef
 
 ---
 
+#### Q10. What is model distillation, and how is it applied to LLMs?
+Model distillation is a technique where a smaller, simpler model (student) is trained to replicate the behavior of a larger, more complex model (teacher). In the context of LLMs, the student model learns from the teacher’s soft predictions rather than hard labels, capturing nuanced knowledge. This approach reduces computational requirements and memory usage while maintaining similar performance, making it ideal for deploying LLMs on resource-constrained devices.
+
+---
+
 
 </div>
