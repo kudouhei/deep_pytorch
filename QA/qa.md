@@ -70,5 +70,9 @@ Model distillation is a technique where a smaller, simpler model (student) is tr
 
 ---
 
+#### Q11. How do LLMs handle out-of-vocabulary (OOV) words?
+Out-of-vocabulary words refer to words that the model did not encounter during training. LLMs address this issue through subword tokenization techniques like Byte-Pair Encoding (BPE) and WordPiece. These methods break down OOV words into smaller, known subword units. 
+
+---
 
 </div>
