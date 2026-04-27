@@ -162,4 +162,32 @@ which tokens to focus on. While effective, the complexity of the dot product
 in sequence length ($O(n^2)$) can be a challenge for long sequences, prompting the development of more efficient approximations.
 
 ---
+
+#### Q18. Explain cross-entropy loss and why it is commonly used in language modeling.
+Cross-entropy loss measures the difference between the predicted probability distribution and the true distribution (one-hot encoding of the correct token). It is defined as:
+$$
+CrossEntropy(y, \hat{y}) = -\sum_{i=1}^{n} y_i \log(\hat{y_i})
+$$
+Where:
+- y is the true distribution
+- $\hat{y}$ is the predicted distribution
+- n is the number of tokens
+
+Cross-entropy loss penalizes incorrect predictions more heavily, encouraging the model to output probabilities that are closer to 1 for the correct class. In language modeling, it ensures the model predicts the correct token in a sequence with high confidence.
+
+---
+
+#### Q19. How do you compute the gradient of the loss function with respect to embeddings?
+To compute the gradient of the loss $L$ with respect to an embedding vector $E$, you apply the chain rule:
+$$
+\frac{\partial L}{\partial E} = \frac{\partial L}{\partial \hat{y}} \frac{\partial \hat{y}}{\partial E} 
+$$
+Here, $\frac{\partial L}{\partial \hat{y}}$ is the gradient of the loss with respect to the output logits, and $\frac{\partial \hat{y}}{\partial E}$ is the gradient of the logits with respect to the embeddings.
+
+Backpropagation propagates these gradients through the network layers, adjusting the embedding vectors to minimize the loss.
+
+---
+
+
+
 </div>
