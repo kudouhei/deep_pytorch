@@ -96,6 +96,48 @@ Overfitting occurs when a machine learning model performs well on the training d
 
 ---
 
+#### Q14. What are positional encodings in the context of large language models?
+Positional encodings are a technique used to add information about the position of tokens in a sequence to the input embeddings. This is important because the Transformer architecture does not inherently understand the order of tokens in a sequence, so positional encodings are used to provide this information.
+
+Mechanism:
+- Additive Approach: Positional encodings are added to input word embeddings, merging static word representations with positional data.
+- Sinusoidal Function: Many LLMs, such as the GPT series, use sinusoidal functions to generate these positional encodings.
+  
+Formula:
+```
+PE(pos, 2i) = sin(pos / (10000^(2i/d_model)))
+PE(pos, 2i+1) = cos(pos / (10000^(2i/d_model)))
+
+Where:
+- pos is the position in the sequence
+- i is the dimension index (0 ≤ i < d_model/2)
+- d_model is the dimensionality of the model
+```
+
+---
+
+#### Q15. What is Multi-head attention?
+Multi-head attention is an enhancement of single-head attention, allowing a model to attend to information from different representation subspaces simultaneously, focusing on various positions in the data. Instead of using a single attention mechanism, multi-head attention projects the queries, keys, and values into multiple subspaces (denoted as h times) through distinct learned linear transformations.
+
+![Multi-head attention](./images/15-multihead.png)
+This process involves applying the attention function in parallel to each of these projected versions of the queries, keys, and values, which generates multiple output vectors. These outputs are then combined to produce the final dv-dimensional result. This approach improves the model's ability to capture more complex patterns and relationships in the data.
+
+```
+Attention(Q, K, V) = softmax(QK^T / sqrt(d_k))V
+Where:
+- Q is the query matrix
+- K is the key matrix
+- V is the value matrix
+- d_k is the dimensionality of the key matrix
+```
+
+```
+MultiHead(Q, K, V) = Concat(head_1, ..., head_h)W^O
+Where:
+- head_i = Attention(QW^Q_i, KW^K_i, VW^V_i)
+- W^Q_i, W^K_i, W^V_i are the learned linear transformations for the i-th head
+- W^O is the learned linear transformation for the output
+```
 
 ---
 </div>
