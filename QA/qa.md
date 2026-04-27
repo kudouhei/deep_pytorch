@@ -122,22 +122,44 @@ Multi-head attention is an enhancement of single-head attention, allowing a mode
 ![Multi-head attention](./images/15-multihead.png)
 This process involves applying the attention function in parallel to each of these projected versions of the queries, keys, and values, which generates multiple output vectors. These outputs are then combined to produce the final dv-dimensional result. This approach improves the model's ability to capture more complex patterns and relationships in the data.
 
-```
-Attention(Q, K, V) = softmax(QK^T / sqrt(d_k))V
+**Multi-head attention:**
+$$
+MultiHead(Q, K, V) = Concat(head_1, ..., head_h)W^O$$
+
+Where:
+- $head_i = Attention(QW^Q_i, KW^K_i, VW^V_i)$
+- $W^Q_i, W^K_i, W^V_i$ are the learned linear transformations for the i-th head
+- $W^O$ is the learned linear transformation for the output
+
+
+#### Q16. Derive the softmax function and explain its role in attention mechanisms.
+The softmax function transforms a vector of real numbers into a probability distribution. For an input vector $x = [x_1, x_2, ..., x_n]$, the softmax function for the i-th element is defined as:
+$$
+Softmax(x_i) = \frac{exp(x_i)}{\sum_{j=1}^{n} exp(x_j)}
+$$
+
+- This ensures all output values lie between 0 and 1 and sum to 1, making them interpretable as probabilities. 
+- In attention mechanisms, softmax is applied to the attention scores to normalize them, allowing the model to assign varying levels of importance to different tokens when generating output. This helps the model focus on the most relevant parts of the input sequence.
+
+---
+
+#### Q17. How is the dot product used in self-attention, and what are its implications for computational efficiency?
+In self-attention, the dot product is used to calculate the similarity between query (Q) and key (K) vectors. The attention scores are computed as:
+
+The dot product is defined as:
+$$
+Attention(Q, K, V) = softmax(\frac{QK^T}{\sqrt{d_k}})V
+$$
+
 Where:
 - Q is the query matrix
 - K is the key matrix
 - V is the value matrix
 - d_k is the dimensionality of the key matrix
-```
 
-```
-MultiHead(Q, K, V) = Concat(head_1, ..., head_h)W^O
-Where:
-- head_i = Attention(QW^Q_i, KW^K_i, VW^V_i)
-- W^Q_i, W^K_i, W^V_i are the learned linear transformations for the i-th head
-- W^O is the learned linear transformation for the output
-```
+The dot product measures alignment between tokens, helping the model decide
+which tokens to focus on. While effective, the complexity of the dot product
+in sequence length ($O(n^2)$) can be a challenge for long sequences, prompting the development of more efficient approximations.
 
 ---
 </div>
