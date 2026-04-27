@@ -87,7 +87,15 @@ The Transformer architecture overcomes key limitations of traditional Seq2Seq mo
 #### Q13. What is overfitting in machine learning, and how can it be prevented?
 Overfitting occurs when a machine learning model performs well on the training data but poorly on unseen or test data. This typically happens because the model has learned not only the underlying patterns in the data but also the noise and outliers, making it overly complex and tailored to the training set. As a result, the model fails to generalize to new data.
 
+**Techniques to overcome overfitting:**
+- **Regularization (L1, L2)**: Adding a penalty to the loss function to discourage overly complex models. L1 (Lasso) can help in feature selection, while L2 (Ridge) smooths weights.
+- **Dropout**: In neural networks, dropout randomly deactivates a fraction of neurons during training, preventing the model from becoming overly reliant on specific nodes.
+- **Data Augmentation**: Creating new training examples by applying transformations like rotations, translations, or scaling to the original data.
+- **Early Stopping**: Monitoring the performance of the model on validation data and stopping training when the validation loss stops decreasing.
+- **Simpler Models**: Reducing the complexity of the model by decreasing the number of features, parameters, or layers can help avoid overfitting.
+
 ---
+
 
 ---
 </div>
